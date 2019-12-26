@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleNode?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root prefHeight="845.0" prefWidth="950.0" style="-fx-background-color: #E7E5EA;" stylesheets="@css/Style.css" type="GridPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alpsha.Controllers.TodayController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="531.0" minWidth="10.0" prefWidth="531.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="469.0" minWidth="10.0" prefWidth="419.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="150.0" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="0.0" prefHeight="779.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <HBox prefHeight="77.0" prefWidth="200.0" style="-fx-background-color: #0B0023;" GridPane.columnSpan="2">
+         <children>
+            <Pane prefHeight="75.0" prefWidth="85.0">
+               <HBox.margin>
+                  <Insets left="12.0" />
+               </HBox.margin>
+               <children>
+                  <JFXToggleNode fx:id="buttonBreakfast" prefHeight="75.0" prefWidth="85.0" style="-jfx-toggle-color: #584D70; -jfx-rippler-fill: #584D70;" text="Breakfast" textFill="#b7b2c1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="mealTypes" />
+                     </toggleGroup>
+                  </JFXToggleNode>
+               </children>
+            </Pane>
+            <Pane prefHeight="75.0" prefWidth="85.0">
+               <children>
+                  <JFXToggleNode fx:id="buttonMorning" prefHeight="75.0" prefWidth="85.0" style="-jfx-toggle-color: #584D70; -jfx-rippler-fill: #584D70;" text="Morning" textFill="#b7b2c1" toggleGroup="$mealTypes" />
+               </children>
+            </Pane>
+            <Pane prefHeight="75.0" prefWidth="85.0">
+               <children>
+                  <JFXToggleNode fx:id="buttonLunch" prefHeight="75.0" prefWidth="85.0" style="-jfx-toggle-color: #584D70; -jfx-rippler-fill: #584D70;" text="Lunch" textFill="#b7b2c1" toggleGroup="$mealTypes" />
+               </children>
+            </Pane>
+            <Pane prefHeight="75.0" prefWidth="85.0">
+               <children>
+                  <JFXToggleNode fx:id="buttonEvening" prefHeight="75.0" prefWidth="85.0" style="-jfx-toggle-color: #584D70; -jfx-rippler-fill: #584D70;" text="Evening" textFill="#b7b2c1" toggleGroup="$mealTypes" />
+               </children>
+            </Pane>
+            <Pane prefHeight="75.0" prefWidth="85.0">
+               <children>
+                  <JFXToggleNode fx:id="buttonDinner" prefHeight="75.0" prefWidth="85.0" style="-jfx-toggle-color: #584D70; -jfx-rippler-fill: #584D70;" text="Dinner" textFill="#b7b2c1" toggleGroup="$mealTypes" />
+               </children>
+            </Pane>
+            <Pane prefHeight="75.0" prefWidth="85.0">
+               <children>
+                  <JFXToggleNode fx:id="buttonNight" prefHeight="75.0" prefWidth="85.0" style="-jfx-toggle-color: #584D70; -jfx-rippler-fill: #584D70;" text="Night" textFill="#b7b2c1" toggleGroup="$mealTypes" />
+               </children>
+            </Pane>
+         </children>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </HBox>
+      <ScrollPane fx:id="foodDetailsPane" hbarPolicy="NEVER" prefHeight="770.0" prefWidth="432.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <content>
+            <AnchorPane maxWidth="1.7976931348623157E308" prefHeight="759.0" prefWidth="416.0" style="-fx-background-color: #E7E5EA;">
+               <children>
+                  <Label layoutX="35.0" layoutY="14.0" prefHeight="36.0" prefWidth="89.0" text="Name">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="36.0" layoutY="124.0" prefHeight="36.0" prefWidth="116.0" text="Serving Size">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="35.0" layoutY="339.0" prefHeight="36.0" prefWidth="116.0" text="Nutrition">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <VBox layoutX="35.0" layoutY="430.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Calories" />
+                        <JFXTextField fx:id="caloriesField" prefHeight="26.0" prefWidth="338.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Protein">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="proteinField" prefHeight="26.0" prefWidth="338.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fat">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="fatField" prefHeight="26.0" prefWidth="338.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Carbs">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="carbsField" prefHeight="26.0" prefWidth="338.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fiber">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="fiberField" prefHeight="26.0" prefWidth="338.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></JFXTextField>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cholesterol">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="cholesterolField" prefHeight="26.0" prefWidth="338.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sodium">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="sodiumField" prefHeight="26.0" prefWidth="338.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Potassium">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="potassiumField" prefHeight="26.0" prefWidth="338.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Calcium">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="calciumField" prefHeight="26.0" prefWidth="338.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vitamin A">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="vitaminAField" prefHeight="26.0" prefWidth="338.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vitamin C">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="vitaminCField" prefHeight="26.0" prefWidth="338.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Iron">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="ironField" prefHeight="26.0" prefWidth="338.0">
+                           <VBox.margin>
+                              <Insets bottom="30.0" />
+                           </VBox.margin></JFXTextField>
+                     </children>
+                  </VBox>
+                  <JFXTextField fx:id="foodNameField" layoutX="35.0" layoutY="50.0" prefHeight="26.0" prefWidth="333.0" text="Pancake" />
+                  <JFXComboBox fx:id="servingSelectionBox" layoutX="36.0" layoutY="160.0" prefHeight="26.0" prefWidth="336.0" />
+                  <JFXTextField fx:id="servingAmountField" layoutX="36.0" layoutY="206.0" />
+                  <JFXButton fx:id="buttonSaveServing" layoutX="41.0" layoutY="261.0" onAction="#handleSaveServing" prefHeight="26.0" prefWidth="96.0" style="-fx-background-color: #4dd599;" text="Save" />
+                  <Label layoutX="35.0" layoutY="375.0" text="Values are based on 100 grams">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <AnchorPane prefHeight="753.0" prefWidth="531.0" GridPane.rowIndex="1">
+         <children>
+            <JFXCheckBox fx:id="workOutDayBox" checkedColor="#00918e" layoutX="50.0" layoutY="707.0" onAction="#handleWorkoutDay" text="Workout Day" unCheckedColor="#110133">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXButton fx:id="buttonPlus" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="435.0" layoutY="690.0" onAction="#onButtonPlusAction" prefHeight="68.0" prefWidth="68.0" ripplerFill="#110133" style="fx-background-radius: 5px;" textOverrun="CLIP">
+               <graphic>
+                  <ImageView fitHeight="59.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/img/plus-circle.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXListView fx:id="listView" fixedCellSize="80.0" layoutX="5.0" layoutY="5.0" maxHeight="658.0" maxWidth="530.0" prefHeight="658.0" prefWidth="525.0" style="-fx-background-color: #E7E5EA; -fx-border-width: 0;">
+               <padding>
+                  <Insets right="5.0" />
+               </padding></JFXListView>
+         </children>
+      </AnchorPane>
+   </children>
+</fx:root>

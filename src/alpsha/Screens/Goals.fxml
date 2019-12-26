@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="845.0" prefWidth="950.0" style="-fx-background-color: #E7E5EA;" stylesheets="@css/Style.css" type="GridPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alpsha.Controllers.GoalsController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="845.0" prefWidth="950.0">
+         <padding>
+            <Insets bottom="30.0" left="50.0" right="50.0" top="30.0" />
+         </padding>
+         <children>
+            <HBox prefHeight="76.0" prefWidth="900.0">
+               <children>
+                  <JFXRadioButton fx:id="radioWorkoutDay" onAction="#changeDayType" prefHeight="50.0" prefWidth="150.0" selected="true" text="Workout Day">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="dayTypeChooser" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="radioRestDay" onAction="#changeDayType" prefHeight="50.0" prefWidth="150.0" text="Rest Day" toggleGroup="$dayTypeChooser">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXRadioButton>
+               </children>
+            </HBox>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="559.0" prefWidth="862.0" style="-fx-focus-color: #E7E5EA; -fx-box-border: transparent;">
+               <content>
+                  <VBox fx:id="nutritionBox" prefHeight="528.0" prefWidth="848.0" style="-fx-background-color: #E7E5EA; -fx-border-width: 0; -fx-focus-color: transparent;">
+                     <children>
+                        <Label text="Calories">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <JFXTextField text="1200" />
+                        <Label text="Protein">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <JFXTextField text="1200" />
+                        <Label text="Fat">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <JFXTextField text="1200" />
+                        <Label text="Carbs">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <JFXTextField text="1200" />
+                        <Label text="Fiber">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <JFXTextField text="1200" />
+                        <Label text="Cholesterol">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <JFXTextField text="1200" />
+                        <Label text="Sodium">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <JFXTextField text="1200" />
+                        <Label text="Potassium">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <JFXTextField text="1200" />
+                        <Label text="Calcium">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <JFXTextField text="1200" />
+                        <Label text="Vitamin A">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <JFXTextField text="1200" />
+                        <Label text="Vitamin C">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <JFXTextField text="1200" />
+                        <Label text="Iron">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <JFXTextField text="1200" />
+                     </children>
+                     <padding>
+                        <Insets left="30.0" right="30.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <JFXButton onAction="#handleSaveButton" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #4dd599;" text="Save">
+                     <HBox.margin>
+                        <Insets left="30.0" top="20.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton onAction="#handleCancelButton" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #ffdc34;" text="Cancel">
+                     <HBox.margin>
+                        <Insets left="30.0" top="20.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</fx:root>

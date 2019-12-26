@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="845.0" prefWidth="950.0" type="GridPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alpsha.Controllers.ReportController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <ScrollPane prefHeight="845.0" prefWidth="950.0">
+         <content>
+            <VBox fx:id="barBox" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="950.0">
+               <children>
+                  <StackedBarChart legendVisible="false" prefHeight="209.0" prefWidth="727.0" title="Calories">
+                     <xAxis>
+                        <CategoryAxis side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis side="LEFT" />
+                     </yAxis>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </StackedBarChart>
+                  <StackedBarChart prefHeight="209.0" prefWidth="727.0" title="Total Fat">
+                     <xAxis>
+                        <CategoryAxis side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis side="LEFT" />
+                     </yAxis>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </StackedBarChart>
+                  <StackedBarChart prefHeight="209.0" prefWidth="727.0" title="Carbs">
+                     <xAxis>
+                        <CategoryAxis side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis side="LEFT" />
+                     </yAxis>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </StackedBarChart>
+                  <StackedBarChart prefHeight="209.0" prefWidth="727.0" title="Protein">
+                     <xAxis>
+                        <CategoryAxis side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis side="LEFT" />
+                     </yAxis>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </StackedBarChart>
+                  <StackedBarChart prefHeight="209.0" prefWidth="727.0" title="Vitamin D">
+                     <xAxis>
+                        <CategoryAxis side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis side="LEFT" />
+                     </yAxis>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </StackedBarChart>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</fx:root>

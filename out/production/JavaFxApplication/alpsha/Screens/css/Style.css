@@ -1,0 +1,58 @@
+
+.list-view {
+    -fx-selection-bar: #00918e;
+    -fx-background-color: #E7E5EA;
+}
+
+.list-cell {
+    -fx-background-color: #E7E5EA;
+}
+
+.list-cell:filled:hover {
+    -fx-text-fill: black;
+}
+
+.list-cell:filled:selected:focused, list-cell:filled:selected {
+    -fx-background-color: #00918e;
+    -fx-text-fill: #E7E5EA;
+}
+
+.list-cell:selected {
+    -fx-text-fill: #E7E5EA;
+}
+
+.jfx-text-field {
+    -jfx-focus-color: #00918e;
+}
+
+.combo-box,
+.choice-box {
+    /*-fx-font-size: 12px;*/
+    /*-fx-prompt-text-fill: black;*/
+    /*-fx-text-fill: black;*/
+    /*-fx-background-color: none;*/
+    /*-fx-border-width: 0 0 1 0;*/
+    /*-fx-border-color: #bdbdbd;*/
+    /*-fx-padding: 0 0 3 -8;*/
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #CFCCD6;
+    -fx-text-fill: black;
+    -jfx-focus-color: #00918e;
+}
+
+.jfx-combo-box {
+    -jfx-focus-color: #00918e;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #00918e;
+    -fx-text-fill: white;
+}
+
+.scroll-pane {
+    -fx-background-color: -fx-control-inner-background;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}

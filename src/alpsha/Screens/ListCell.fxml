@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListCell?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<JFXListCell maxHeight="105.0" prefHeight="95.0" prefWidth="485.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <graphic>
+      <VBox fx:id="itemBox" prefHeight="105.0" prefWidth="488.0">
+         <children>
+            <Label fx:id="foodName" prefHeight="32.0" prefWidth="377.0" text="Biscuit">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="foodContents" maxHeight="1.7976931348623157E308" maxWidth="450.0" prefWidth="437.0" text="1 medium: Calories - 98, Total fat - 2.8, Carbs - 15, Protein - 2.2, Vitamin D - 0.2, Iron - 0.3" wrapText="true" />
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </VBox>
+   </graphic>
+</JFXListCell>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import com.jfoenix.controls.JFXToggleNode?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root prefHeight="845.0" prefWidth="950.0" type="GridPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alpsha.Controllers.JournalController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="342.0" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="778.0" minHeight="10.0" prefHeight="778.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <HBox prefHeight="77.0" prefWidth="200.0" style="-fx-background-color: #0B0023;">
+         <children>
+            <Pane prefHeight="75.0" prefWidth="85.0">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <children>
+                  <JFXToggleNode fx:id="buttonCalories" prefHeight="75.0" prefWidth="85.0" style="-jfx-toggle-color: #584D70; -jfx-rippler-fill: #584D70;" text="Calories" textFill="#b7b2c1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="mealTypes" />
+                     </toggleGroup>
+                  </JFXToggleNode>
+               </children>
+            </Pane>
+            <Pane prefHeight="75.0" prefWidth="85.0">
+               <children>
+                  <JFXToggleNode fx:id="buttonProtein" prefHeight="75.0" prefWidth="85.0" style="-jfx-toggle-color: #584D70; -jfx-rippler-fill: #584D70;" text="Protein" textFill="#b7b2c1" toggleGroup="$mealTypes" />
+               </children>
+            </Pane>
+            <Pane prefHeight="75.0" prefWidth="85.0">
+               <children>
+                  <JFXToggleNode fx:id="buttonCarbs" prefHeight="75.0" prefWidth="85.0" style="-jfx-toggle-color: #584D70; -jfx-rippler-fill: #584D70;" text="Carbs" textFill="#b7b2c1" toggleGroup="$mealTypes" />
+               </children>
+            </Pane>
+            <Pane prefHeight="75.0" prefWidth="85.0">
+               <children>
+                  <JFXToggleNode fx:id="buttonFat" prefHeight="75.0" prefWidth="85.0" style="-jfx-toggle-color: #584D70; -jfx-rippler-fill: #584D70;" text="Fat" textFill="#b7b2c1" toggleGroup="$mealTypes" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <JFXScrollPane style="-fx-background-color: white;" GridPane.rowIndex="1">
+         <children>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <children>
+                  <Text fx:id="dateLabel" layoutX="52.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12/21/2019" wrappingWidth="123.7294921875">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="remainingLabel" layoutX="666.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remaining 1022.0" />
+                  <Text fx:id="totalNutritionLabel" layoutX="802.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2792.0" wrappingWidth="63.2587890625">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+                  <JFXButton fx:id="buttonNextDay" contentDisplay="GRAPHIC_ONLY" layoutX="165.0" layoutY="42.0" onAction="#nextDay">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="26.0">
+                           <image>
+                              <Image url="@../../resources/img/up.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="buttonPreviousDay" contentDisplay="GRAPHIC_ONLY" layoutX="198.0" layoutY="43.0" onAction="#previousDay">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="26.0">
+                           <image>
+                              <Image url="@../../resources/img/down.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXListView fx:id="listView" layoutX="37.0" layoutY="99.0" prefHeight="672.0" prefWidth="860.0" style="-fx-border-width: 0; -fx-background-color: white;" />
+               </children>
+            </AnchorPane>
+         </children>
+      </JFXScrollPane>
+   </children>
+</fx:root>

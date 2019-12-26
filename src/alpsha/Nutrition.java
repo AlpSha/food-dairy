@@ -1,0 +1,16 @@
+package alpsha;
+
+public enum Nutrition {
+CALORIES,
+PROTEIN,
+FAT,
+CARBS,
+FIBER,
+CHOLESTEROL,
+SODIUM,
+POTASSIUM,
+CALCIUM,
+VITAMIN_A,
+VITAMIN_C,
+IRON
+}
