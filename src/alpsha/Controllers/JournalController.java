@@ -80,9 +80,8 @@ public class JournalController implements Initializable {
         mealsList = FXCollections.observableArrayList();
         listView.setCellFactory(journalListView -> new JournalListViewCell(this));
 
-        //TODO select today
         currentNut = Nutrition.CALORIES;
-        selectDate(LocalDate.parse("22.12.2019", Date.formatter));
+        selectDate(LocalDate.now());
 
     }
 

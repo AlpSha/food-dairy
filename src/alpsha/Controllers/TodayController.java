@@ -112,7 +112,7 @@ public class TodayController implements Initializable {
         foodDetailsPane.setVisible(false);
 
 
-        todaysDate = LocalDate.parse("22.12.2019", Date.formatter);
+        todaysDate = LocalDate.now();
 
 
         mealTypeButtons = new ArrayList<>();
@@ -139,6 +139,7 @@ public class TodayController implements Initializable {
 
         DayData dataInstance = DayData.getInstance();
         today = dataInstance.queryDayByDate(todaysDate);
+        DayData.getInstance().createDayIfNotExists(today);
         workOutDayBox.setSelected(DayData.getInstance().queryDayStatus(today));
 
         buttonBreakfast.setSelected(true);

@@ -53,7 +53,7 @@ public class ReportController implements Initializable {
 
             LocalDate today = LocalDate.now();
             double totalNut;
-            for(int i=1; i < 8; i++) {
+            for(int i=6; i >= 0; i--) {
                 totalNut = 0;
                 LocalDate date = today.minusDays(i);
                 Day day = DayData.getInstance().queryDayByDate(date);

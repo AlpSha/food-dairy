@@ -60,6 +60,7 @@ public class JournalListViewCell extends ListCell<Meal> {
                     e.printStackTrace();
                 }
             }
+            DecimalFormat df = new DecimalFormat("#.#");
             mealType.setText(StringFormatter.capitalizeWord(meal.getType().toString()));
             double totalOfMeal = 0;
             foodNameBox.getChildren().setAll(new ArrayList<>());
@@ -73,15 +74,14 @@ public class JournalListViewCell extends ListCell<Meal> {
                 nutValueText.setTextAlignment(TextAlignment.RIGHT);
                 nutValueText.setWrappingWidth(43);
                 double nutValue = s.getNutritionAmount(parentController.currentNut);
-                nutValueText.setText(String.valueOf(nutValue));
+                nutValueText.setText(df.format(nutValue));
                 nutritionValuesBox.getChildren().add(nutValueText);
                 totalOfMeal += nutValue;
             }
-            DecimalFormat df = new DecimalFormat("#");
             totalOfMeal = Double.parseDouble(df.format(totalOfMeal));
             mealTotalNutrition.setText(String.valueOf(totalOfMeal));
             mealTotalNutrition.setTextAlignment(TextAlignment.RIGHT);
-            mealTotalNutrition.setWrappingWidth(43);
+            mealTotalNutrition.setWrappingWidth(53);
 
             setText(null);
             setGraphic(itemPane);

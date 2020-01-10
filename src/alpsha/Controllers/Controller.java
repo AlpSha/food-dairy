@@ -56,9 +56,7 @@ public class Controller implements Initializable {
 
         currentMainPane = mainPane;
         todayScreen = new TodayScreen();
-        journalScreen = new JournalScreen();
         goalsScreen = new GoalsScreen();
-        reportScreen = new ReportScreen();
 
         mainPane.setCenter(todayScreen);
     }
@@ -68,9 +66,11 @@ public class Controller implements Initializable {
         Screen screen;
         switch (((Control)event.getSource()).getId()) {
             case "buttonJournal":
+                journalScreen = new JournalScreen();
                 screen = journalScreen;
                 break;
             case "buttonReport":
+                reportScreen = new ReportScreen();
                 screen = reportScreen;
                 break;
             case "buttonGoals":

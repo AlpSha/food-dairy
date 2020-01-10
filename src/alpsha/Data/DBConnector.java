@@ -29,6 +29,7 @@ public class DBConnector extends Queries {
             preparedStatements.add(updateDayStatus = conn.prepareStatement(UPDATE_DAY_STATUS));
             preparedStatements.add(queryDayStatus = conn.prepareStatement(QUERY_DAY_STATUS));
             preparedStatements.add(updateFoodByName = conn.prepareStatement(UPDATE_FOOD_BY_NAME));
+            preparedStatements.add(insertIntoDays = conn.prepareStatement(INSERT_INTO_DAYS));
 
 
             return true;

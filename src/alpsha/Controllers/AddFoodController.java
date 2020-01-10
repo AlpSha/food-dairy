@@ -43,7 +43,7 @@ public class AddFoodController implements Initializable {
 
         FoodData foodData = FoodData.getInstance();
         foodsList.setAll(foodData.foods.values());
-        filteredList = new FilteredList<>(foodsList, food -> true);
+        filteredList = new FilteredList<>(foodsList, food -> !food.getName().toLowerCase().contains("target_"));
         listView.setItems(filteredList);
 
         listView.setCellFactory(lv -> new ListCell<>() {
@@ -65,7 +65,7 @@ public class AddFoodController implements Initializable {
     public void handleSearchKey() {
         String searchParameter = searchField.getText().toLowerCase();
         if(searchParameter.isBlank()) {
-            filteredList.setPredicate(food -> true);
+            filteredList.setPredicate(food -> !food.getName().toLowerCase().contains("target_"));
         } else {
             filteredList.setPredicate(food -> food.getName().toLowerCase().contains(searchParameter));
         }

@@ -59,7 +59,7 @@
       </HBox>
       <JFXScrollPane style="-fx-background-color: white;" GridPane.rowIndex="1">
          <children>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="770.0" prefWidth="925.0" style="-fx-background-color: white;">
                <children>
                   <Text fx:id="dateLabel" layoutX="52.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12/21/2019" wrappingWidth="123.7294921875">
                      <font>

@@ -17,13 +17,12 @@ public class DayData extends Queries {
     public Day queryDayByDate(LocalDate date) {
         FoodData foodData = FoodData.getInstance();
         Day day = new Day(date);
-        boolean workoutDay = false;
         try {
             queryDayByDate.setString(1, date.toString(Date.formatter));
             ResultSet resultSet = queryDayByDate.executeQuery();
             while (resultSet.next()) {
                 MealType type = MealType.valueOf(resultSet.getString(INDEX_DAY_MEAL_TYPE).toUpperCase());
-                workoutDay = resultSet.getBoolean(INDEX_DAY_WORKOUT_DAY);
+                boolean workoutDay = resultSet.getBoolean(INDEX_DAY_WORKOUT_DAY);
                 String foodName = resultSet.getString(INDEX_DAY_FOOD_NAME);
                 String servingType = resultSet.getString(INDEX_DAY_SERVING_TYPE);
                 double unitsOfServing = resultSet.getDouble(INDEX_DAY_UNITS);
@@ -31,6 +30,7 @@ public class DayData extends Queries {
 
                 Food food = foodData.foods.get(foodName);
                 day.addServing(type, new Serving(new ServingType(servingType, contentPerServing), unitsOfServing, food));
+                day.setWorkoutDay(workoutDay);
             }
             return day;
 
@@ -63,6 +63,33 @@ public class DayData extends Queries {
             System.out.println(e.getMessage());
             e.printStackTrace();
             return false;
+        }
+    }
+
+    public boolean queryDayExists(Day day) {
+        try {
+            queryDayByDate.setString(1, day.getDate().toString(Date.formatter));
+            ResultSet set = queryDayByDate.executeQuery();
+            if(set.next()) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public void createDayIfNotExists(Day day) {
+        if ( !queryDayExists(day)) {
+            try {
+                insertIntoDays.setString(1, day.getDate().toString(Date.formatter));
+                insertIntoDays.setBoolean(2, false);
+                insertIntoDays.execute();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 

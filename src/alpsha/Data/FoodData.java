@@ -2,13 +2,10 @@ package alpsha.Data;
 
 import alpsha.Food;
 import alpsha.Nutrition;
-import alpsha.Serving;
 import alpsha.ServingType;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.collections.ObservableMap;
 
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;

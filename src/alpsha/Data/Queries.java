@@ -165,6 +165,9 @@ public class Queries {
             COLUMN_TABLEDAYS_DATE + " = ?";
     static final String QUERY_DAY_STATUS = "SELECT " + COLUMN_TABLEDAYS_WORKOUT_DAY +
             " FROM " + TABLE_DAYS + " WHERE " + COLUMN_TABLEDAYS_DATE + " = ?";
+    static final String INSERT_INTO_DAYS = "INSERT INTO " + TABLE_DAYS +
+            " (" + COLUMN_TABLEDAYS_DATE + ", " + COLUMN_TABLEDAYS_WORKOUT_DAY +
+            ") VALUES (?, ?)";
 
 
     static Connection conn;
@@ -184,6 +187,7 @@ public class Queries {
 
     static PreparedStatement updateDayStatus;
     static PreparedStatement queryDayStatus;
+    static PreparedStatement insertIntoDays;
 
 
 

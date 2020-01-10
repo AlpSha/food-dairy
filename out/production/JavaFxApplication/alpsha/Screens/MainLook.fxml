@@ -6,10 +6,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="845.0" prefWidth="1151.0"  xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alpsha.Controllers.Controller">
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="845.0" prefWidth="1151.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alpsha.Controllers.Controller">
    <left>
       <VBox prefHeight="851.0" prefWidth="201.0" style="-fx-background-color: #110133;" BorderPane.alignment="CENTER">
          <children>
@@ -51,15 +50,6 @@
                </font>
                <graphic>
                   <ImageView fx:id="bu" fitHeight="49.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true" />
-               </graphic>
-            </JFXButton>
-            <Line endX="100.0" startX="-100.0" stroke="#b7b2c1" />
-            <JFXButton prefHeight="64.0" prefWidth="211.0" ripplerFill="#00918e" style="-fx-alignment: BASELINE_LEFT;" text="Settings" textFill="#b7b2c1">
-               <font>
-                  <Font size="15.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="49.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true" />
                </graphic>
             </JFXButton>
          </children>
